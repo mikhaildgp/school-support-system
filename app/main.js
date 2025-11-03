@@ -5,8 +5,9 @@ function init() {
   if (!root) return;
   renderLayout(root);
   import('./legacy-app.js').catch((err) => {
+    const message = err?.message || String(err);
     const el = document.getElementById('diagStatus');
-    if (el) el.textContent = '❌ Failed to load app';
+    if (el) el.textContent = '❌ ' + message;
     console.error('Legacy app load error', err);
   });
 }
