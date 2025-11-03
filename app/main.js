@@ -23,8 +23,14 @@ async function boot() {
   diag('diagSess', session ? 'ok' : 'none');
 
   if (!session) {
-    // No session → keep your original behavior
-    location.href = 'index.html';
+    // If we are already on the landing page, stay put and rely on local mode.
+    const path = (location.pathname || '').replace(/\/+$/, '');
+    const onIndex = path === '' || path === '/' || path.endsWith('/index.html');
+    if (!onIndex) {
+      location.href = 'index.html';
+    } else {
+      diag('diagStatus', 'No Supabase session — offline mode');
+    }
     return;
   }
 
