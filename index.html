@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Support System</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Supabase SDK + your config -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase_config.js"></script>
+
+  <!-- App entry (ES modules) -->
+  <script type="module" src="app/main.js"></script>
+</head>
+<body>
+  <!-- Only the app root; layout.js will render everything inside -->
+  <div id="app"></div>
+
+  <!-- Diagnostics overlay (optional) -->
+  <div id="diag" class="diag">
+    <div><strong>Diag</strong> <span id="diagStatus">init…</span></div>
+    <div class="muted">URL: <span id="diagUrl"></span></div>
+    <div class="muted">Session: <span id="diagSess">n/a</span></div>
+    <div class="muted">User: <span id="diagUser">n/a</span></div>
+    <div class="muted">Role: <span id="diagRole">n/a</span></div>
+  </div>
+</body>
+</html>
