@@ -4265,6 +4265,3 @@ if (typeof window.approveTask !== 'function') window.approveTask = function(){ a
 if (typeof window.updateThemeProgress !== 'function') window.updateThemeProgress = function(){ console.info('updateThemeProgress: noop'); };
 if (typeof window.switchToStudentMode !== 'function') window.switchToStudentMode = function(){ window.currentRole='student'; if (window.updateRoleDisplay) updateRoleDisplay(); };
 
-
-</body>
-</html>
