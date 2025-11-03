@@ -2,7 +2,7 @@
 import { supa } from './supa.js';
 import { state, saveLocal, loadLocalIfNeeded } from './state.js';
 import { renderLayout } from './ui/layout.js';
-import { initSystem } from './app/system.js'; // ✅ new
+import { initSystem } from './ui/system.js'; // ✅ system wiring
 
 function setDate(el) {
   const today = new Date();
